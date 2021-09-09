@@ -1,0 +1,9 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: guides
+          predicates:
+            - Path=/guide
+            - After=2020-09-02T00:00:00.000-00:00[America/Denver]
+          uri: https://www.europages.fr
